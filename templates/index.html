@@ -1,0 +1,111 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sentiment Analysis</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+        <link rel="stylesheet" href="../static/styles.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
+            <div class="container-fluid">
+              <img src="../images/logo1.png" alt="logo" id="logo"/>
+              <a class="navbar-brand" href="./index.html"><i>Sentia</i>😊😐😔😡</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Sentiment Modalities</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sentiment Modalities
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./text_analysis.html">Text Analysis</a></li>
+                        <li><a class="dropdown-item" href="./image_analysis.html">Image Analysis</a></li>
+                        <!-- <li>
+                          <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="./movie_review.html">Movie Reviews</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3 mt-lg-0" role="search">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <!-- <nav>
+            <div class="logo">Sentiment Analysis</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="image_analysis.html" class="option-btn">Image Analysis</a></li>
+                <li><a href="text_analysis.html" class="option-btn">Text Analysis</a></li>
+                <li><a href="movie_review.html" class="option-btn">IMDb Review Analysis</a></li>
+            </ul>
+        </nav> -->
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 id="font-bold"><i>Sentia</i></h1>
+                <h1>A Multimodal Sentiment Analyzer</h1>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Features of Sentiment Analysis Application -  <i>Sentia</i></h2>
+            <div class="cards">
+
+                <a href="./text_analysis.html"  class="card-link">
+                    <div class="card">
+                        <img src="../images/text.jpeg" alt="Text Sentiment Analysis">
+                        <h3>Text Sentiment Analysis</h3>
+                        <p>Analyze emotions hidden in written content like tweets, reviews, or comments. 
+                    </div>
+                </a>
+
+                <a href="../image_analysis.html"  class="card-link">
+                    <div class="card">
+                        <img src="../images/text.avif" alt="Image Sentiment Analysis"> 
+                        <h3>Image Sentiment Analysis</h3>
+                        <p>Detect emotional tone from images by analyzing facial expressions, colors, and visual elements.</p>
+                    </div>
+                </a>
+
+                <a href="./movie_review.html"  class="card-link">
+                    <div class="card">
+                        <img src="../images/movie-review.jpeg" alt="Movie Review Sentiment Analysis">
+                        <h3>Movie Review Sentiment Analysis</h3>
+                        <p>Classify IMDb movie reviews as positive, negative or neutral on real audience opinions.</p>
+                    </div>
+                </a>
+            
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    </body>
+</html>

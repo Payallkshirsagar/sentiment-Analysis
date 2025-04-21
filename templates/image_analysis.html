@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Sentiment Analysis</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+        <link rel="stylesheet" href="../static/styles.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        
+    </head>
+    <body style="background-image: url(./images/bg.png);">
+         <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
+            <div class="container-fluid">
+              <img src="../images/logo1.png" alt="logo" id="logo"/>
+              <a class="navbar-brand" href="./index.html"><i>Sentia</i>😊😐😔😡</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Sentiment Modalities</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sentiment Modalities
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./text_analysis.html">Text Analysis</a></li>
+                        <li><a class="dropdown-item" href="./image_analysis.html">Image Analysis</a></li>
+                        <!-- <li>
+                          <hr class="dropdown-divider">
+                        </li> -->
+                        <li><a class="dropdown-item" href="./movie_review.html">Movie Reviews</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3 mt-lg-0" role="search">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <section class="features">
+            <h2>Image based Review Analysis</h2>
+            <p>Every image tells a story — let Sentia reveal the emotion behind yours.</p>
+
+            <form action="/predict_image" method="post" enctype="multipart/form-data">
+                <input type="file" name="review_image" accept="image/*" required><br><br>
+                <button type="submit" class="btn btn-outline-dark">Analyze Image</button>
+            </form>
+
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    </body>
+</html>
